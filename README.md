@@ -8,29 +8,27 @@ We need to install some command line tools for this project to build. We need [S
 
 You can check if package got installed correctly by running command like :
 
-solana -V
-anchor -V
-seahorse -V
+`solana -V`
+`anchor -V`
+`seahorse -V`
 
-I am using:
-* solana 1.9.2
-
+For this project, the version used are :
 * anchor 0.25.0
 
 * seahorse v0.2.2
 
-* node 16.8.0
+* node 19.0.0
 
-## Involved Parties
+## Involved Accounts
 There are 2 types of entities involved here, which are **Manager** and **User**. The Manager is responsible for creating the Lottery and its parameters like lottery price and calling the random winner from all lottery buyers. On the other hand, Users are the people who are buying the lottery. 
 
-Manager Account has fields like Name, Public address, ticket_price, total ticket_count, winner_no(a random no for deciding winner), winner_address(for storing the winner Public key). User Account has fields like Username, user address, ticket_count(number of tickets user bought), User balance.
+Manager Account has fields like Name, ` Public address `, ` ticket_price `, `total ticket_count `, ` winner_no` (a random no for deciding winner), ` winner_address `(for storing the winner Public key). User Account has fields like Username, `user address`, ticket_count(number of tickets user bought), `User balance`.
 
 <div>
   
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/ManagerDetail.png" alt="Alt text" title="Optional title" height="180" width="240">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/ManagerDetail.png" alt="Alt text" title="Optional title" height="170" width="300">
   
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/UserDetail.png" alt="Alt text" title="Optional title" height="180" width="240">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/UserDetail.png" alt="Alt text" title="Optional title" height="170" width="300">
 <!-- <img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/Instructions.png" alt="Alt text" title="Optional title" height="260" width="180">
  -->
 </div>
@@ -40,6 +38,7 @@ We have 7 functions/instructions in this Program. Let's understand all the diffe
 
 ### 1. ManagerInit
 This is the function where we **initialise** the Manager's Account. We set the lottery price here(took $5 here) , ticket counter as 0 and the random number(which will be used for winner selection). Winner address is garbage value at start, will be updated at later functions.
+
 <img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/1.png" alt="Alt text" title="Optional title" height="120" width="380">
 
 ### 2. initTokenMint  
