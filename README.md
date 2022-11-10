@@ -22,43 +22,43 @@ We have 7 functions/instructions in this Program. Let's understand all the diffe
 
 ### 1. ManagerInit
 This is the function where we **initialise** the Manager's Account. We set the lottery price here(took $5 here) , ticket counter as 0 and the random number(which will be used for winner selection). Winner address is garbage value at start, will be updated at later functions.
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/1.png" alt="Alt text" title="Optional title" height="120" width="380">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/1.png" alt="Alt text" title="Optional title" height="120" width="380">
 
 ### 2. initTokenMint  
 This is where we mint.
 
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/2.png" alt="Alt text" title="Optional title" height="120" width="480">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/2.png" alt="Alt text" title="Optional title" height="120" width="480">
 
 ### 3. managerTokenAcc
 Initialise a Token Account for Manager Account so that it can hold Mint Tokens. Now, its just showing 0 Tokens as we have not minted our tokens.
 
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/3.png" alt="Alt text" title="Optional title" height="90" width="690">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/3.png" alt="Alt text" title="Optional title" height="90" width="690">
 
 ### 4. useTokenMint
 In this function, we are minting **10000 Tokens** to the Manager Token Account.
 
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/4.png" alt="Alt text" title="Optional title" height="90" width="690">
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/5.png" alt="Alt text" title="Optional title" height="230" width="890">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/4.png" alt="Alt text" title="Optional title" height="90" width="690">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/5.png" alt="Alt text" title="Optional title" height="230" width="890">
 
 
 ### 5. initUsers
 This instruction is for initialising the Lotery Users. **Note** that, here we are buying tickets, but initialising the User. We are setting a defaul balance of $20 for each user.
 
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/6.png" alt="Alt text" title="Optional title" height="170" width="530">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/6.png" alt="Alt text" title="Optional title" height="170" width="530">
 
 
 ### 6. buyTickets
 This function is used to buy lottery tickets by the initialised Users. **Note** that in below image, $5 has been deducted from the balance and User ticket count is set to 1 for User. Also the ticket count in Manager Account is set to 1 and winner address has been updated correctly (since we chose winner number as 1 for simplicity). 
 
 <div>
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/7.png" alt="Alt text" title="Optional title" height="170" width="500">
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/8.png" alt="Alt text" title="Optional title" height="170" width="500">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/7.png" alt="Alt text" title="Optional title" height="170" width="500">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/8.png" alt="Alt text" title="Optional title" height="170" width="500">
 </div>
 
 ### 7. checkWinner
 Here Users can check whether they got selected or not by giving their Public address and Token Accounts. The Tokens are transferred to the winner here. In this Program 90 % of token tokens is given to the winner and the rest 10 % allocated for the Manager. So Users balance gets updated to $20 (initial) - $5(ticket price) + 9000(lottery prize)=9015.
 
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/10.png" alt="Alt text" title="Optional title" height="170" width="790">
-<img src="https://github.com/akshaydhayal/Seahorse-Lottery/blob/master/assets/11.png" alt="Alt text" title="Optional title" height="170" width="500">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/10.png" alt="Alt text" title="Optional title" height="170" width="790">
+<img src="https://github.com/akshaydhayal/Seahorse-Lottery-Program/blob/master/assets/11.png" alt="Alt text" title="Optional title" height="170" width="500">
 
 
