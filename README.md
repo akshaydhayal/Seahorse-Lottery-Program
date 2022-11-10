@@ -3,6 +3,24 @@
 # Seahorse Lottery Program
 The Objective of this project is to create a **Lottery smart contract** where users can buy lottery tickets and a random winner will be selected from all participants and lottery prize will be rewarded to the winner.
 
+## Prerequisites
+We need to install some command line tools for this project to build. We need [Solana](https://docs.solana.com/cli/install-solana-cli-tools), [Anchor](https://project-serum.github.io/anchor/getting-started/installation.html#install-rust), [NodeJS](https://nodejs.org/en/) and [Seahorse](https://seahorse-lang.org/docs/installation). The links provided contain the step-by-step guide on installing these tools and the dependencies required for them like Rust.
+
+You can check if package got installed correctly by running command like :
+
+solana -V
+anchor -V
+seahorse -V
+
+I am using:
+* solana 1.9.2
+
+* anchor 0.25.0
+
+* seahorse v0.2.2
+
+* node 16.8.0
+
 ## Involved Parties
 There are 2 types of entities involved here, which are **Manager** and **User**. The Manager is responsible for creating the Lottery and its parameters like lottery price and calling the random winner from all lottery buyers. On the other hand, Users are the people who are buying the lottery. 
 
